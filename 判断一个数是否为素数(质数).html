@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 何为质数:一个大于1的自然数,只能被1和本身整除!
+    // function zs(n) {
+    //     var a = true;
+    //     for (var i = 2; i < n; i++) {
+    //         if (n % 2 === 0) {
+    //             a = false;
+    //             break;
+    //         }
+    //     } return a;
+    // }
+    // console.log(zs(9));输出true
+
+
+    // function zs(n) {
+    //     var a = true;
+    //     for (i = 2; i < n; i++) {
+    //         if (n % 2 === 0) {
+    //             a = false;
+    //             break;
+    //         }
+    //     } return a;
+    // }
+    // console.log(zs(11));输出true
+    // console.log(zs(10));输出false
+
+    function zs(n) {
+        var a = true;
+        for (i = 2; i < n; i++) {
+            if (n % 2 === 0) {
+                a = false;
+                break;
+            }
+        }
+        return a;
+    }
+    //  console.log(zs(7));输出true
+    var n = prompt('输入数字');
+    var a = zs(n);
+    if (a === true) {
+        alert('是质数');
+    } else {
+        alert('不是质数');
+    }
+</script>
+
+</html>

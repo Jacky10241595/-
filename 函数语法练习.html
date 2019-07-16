@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function story() {
+        console.log('老和尚再给小和尚讲故事');
+        console.log('从前有座山,山里有座庙');
+    }
+    // 调用
+    story();
+    story();
+
+    // 参数写法,当做一个变量,重新赋值
+    function story(a, b) {
+        console.log('a' + '在给' + 'b' + '讲故事');
+        console.log('从前有座山,山里有座庙');
+    }
+    // 调用
+    story('c', 'd');
+    story('e', 'f');
+    story('g', 'h');
+
+
+    
+    // 求和
+    function getSum(a, b) {
+        console.log(a + b);
+    }
+    getSum(1, 2);
+    getSum(4, 8);
+
+
+
+    function sum(a, b) {
+        console.log(a + b)
+    }
+    sum(45, 34);
+    sum(23, 34);
+    sum(43, 54);
+</script>
+
+</html>

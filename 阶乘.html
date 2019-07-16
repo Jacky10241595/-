@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 阶乘（factorial）是：所有小于及等于该数的正整数的积，并且0的阶乘为1。自然数n的阶乘写作n!。
+    // n!=1*2*3*……*(n-3)*(n-2)*(n-1)*n;
+    // function factorial(n) {
+    //     var f = 1;
+    //     for (var i = n; i >= 1; i--) {
+    //         f *= n;
+    //     } return f;
+    // } console.log(factorial(5));
+
+    // // 求1-n阶乘的和
+    // function sum(n) {
+    //     var a = 0;
+    //     for (var i = 1; i <= n; i++) {
+    //         a += factorial(i);
+    //     } return a;
+    // }
+    // console.log(sum(3));
+
+    // function jc(n) {
+    //     var sum = 1;
+    //     for (var i = n; i >= 1; i--) {
+    //         sum *= n;
+    //     }return sum;
+    // }
+    // // 求1-n阶乘的和
+    // function sum(n){
+    //     var b=0;
+    //     for(var i=1;i<=n;i++){
+    //         b+=jc(i);
+    //     }
+    //     return b;
+    // }
+
+    function jc(n) {
+        var sum = 1;
+        for (var i = n; i >= 1; i--) {
+            sum *= i;
+        } return sum;
+    }
+    console.log(jc(3));
+    // 求和
+    // function sum(n) {
+    //     var c = 0;
+    //     for (var i = 1; i <= n; i++) {
+    //         c += jc(i);
+    //     } return c;
+    // }
+    // console.log(sum(0))
+</script>
+
+</html>

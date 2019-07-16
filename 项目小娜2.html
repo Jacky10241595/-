@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 需求:1.计算总和;2.获取时间;3.讲笑话;4.弹出输入框,让用户根据提示输入
+    while (true) {
+        var msg = prompt('我是小娜,您的语音助手\n' +
+            '输入<编号>或<关键字>选择相应服务,输入q选择退出\n' +
+            '<1>.计算<总和>\n' +
+            '<2>.获取<时间>\n' +
+            '<3>.弹出<笑话>');
+
+        if(msg==='q'){
+            console.log('下次再见');
+            alert('下次再见');
+            break;
+        }
+
+        switch(msg){
+            case '1':
+            case '总和':
+                var numbers=prompt('请输入求和的数字,逗号隔开,如:1,2,3,4');
+                // console.log(numbers);
+                var arr=numbers.split(',');
+                console.log(arr);
+                var sum=0;
+                for(var i=0;i<arr.length;i++){
+                    sum+=parseFloat(arr[i]);
+                }
+                alert('你要的总和是:'+sum);
+                console.log('你要的总和是'+sum);
+                break;
+            case '2':
+            case '时间':
+                var date=new Date();
+                var year=date.getFullYear();
+                var month=date.getMonth()+1;
+                var day=date.getDate();
+                var hour=date.getHours();
+                var minute=date.getMinutes();
+                var second=date.getSeconds();
+                if(month<10){
+                    month='0'+month;
+                }
+                if(day<10){
+                    day='0'+day;
+                }
+                if(hour<10){
+                    hour='0'+hour;
+                }
+                if(minute<10){
+                    minute='0'+minute;
+                }
+                if(second<10){
+                    second='0'+second;
+                }
+                console.log(year,month,day,hour,minute,second);
+                var time=year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+                console.log('当前时间是:'+time);
+                alert('当前时间是:'+time);
+                break;
+            case '3':
+            case '笑话':
+                var joke=['笑话1','笑话2','笑话3','笑话4','笑话5'];
+                var r=Math.floor(Math.random()*joke.length);
+                alert(joke[r]);
+                break;
+                default:
+                    alert('please tyr again');
+                    break;
+        }
+    }
+
+</script>
+
+</html>
